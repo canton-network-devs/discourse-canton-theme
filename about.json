@@ -1,0 +1,31 @@
+{
+  "name": "Canton Landing Theme",
+  "component": false,
+  "license_url": null,
+  "about_url": null,
+  "authors": null,
+  "theme_version": null,
+  "minimum_discourse_version": null,
+  "maximum_discourse_version": null,
+  "assets": {
+    "daml_font_otf": "assets/daml_font_otf.otf",
+    "daml_font_ttf": "assets/daml_font_ttf.ttf",
+    "daml_font_woff_1": "assets/daml_font_woff_1.woff",
+    "daml_font_woff_2": "assets/daml_font_woff_2.woff",
+    "daml_font_woff2_300": "assets/daml_font_woff2_300.woff2",
+    "daml_font_woff2_400": "assets/daml_font_woff2_400.woff2",
+    "daml_font_woff2_500": "assets/daml_font_woff2_500.woff2",
+    "daml_font_woff2_600": "assets/daml_font_woff2_600.woff2",
+    "daml_font_woff2_700": "assets/daml_font_woff2_700.woff2",
+    "daml_font_woff2_800": "assets/daml_font_woff2_800.woff2",
+    "daml_font_woff2_900": "assets/daml_font_woff2_900.woff2",
+    "daml_font_woff_3": "assets/daml_font_woff_3.woff",
+    "daml_font_woff_4": "assets/daml_font_woff_4.woff",
+    "daml_font_woff_5": "assets/daml_font_woff_5.woff",
+    "daml_font_woff_6": "assets/daml_font_woff_6.woff",
+    "daml_font_woff_7": "assets/daml_font_woff_7.woff"
+  },
+  "color_schemes": {},
+  "modifiers": {},
+  "learn_more": "https://meta.discourse.org/t/beginners-guide-to-using-discourse-themes/91966"
+}

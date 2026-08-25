@@ -1,0 +1,12 @@
+// Mobile: stack columns and reduce padding
+html[data-canton-landing] .canton-hero__inner {
+  grid-template-columns: 1fr;
+  row-gap: 14px;
+}
+
+html[data-canton-landing] .categories-and-latest {
+  grid-template-columns: 1fr;
+  gap: 16px;
+  padding-top: 10px;
+}
+

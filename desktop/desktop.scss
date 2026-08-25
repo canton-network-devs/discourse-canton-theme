@@ -1,0 +1,10 @@
+// Desktop-only refinements
+html[data-canton-landing] .categories-and-latest {
+  align-items: start;
+}
+
+html[data-canton-landing] .categories-and-latest .latest-topic-list {
+  position: relative;
+  top: 0;
+}
+

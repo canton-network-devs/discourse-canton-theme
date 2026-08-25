@@ -1,0 +1,369 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --canton-ink: #0b0b0f;
+  --canton-ink-2: #14141d;
+  --canton-paper: #ffffff;
+  --canton-mist: #f6f6fa;
+  --canton-line: rgba(20, 20, 29, 0.12);
+  --canton-accent: #7c3aed; // violet-ish
+  --canton-accent-ink: #ffffff;
+  --canton-muted: rgba(20, 20, 29, 0.62);
+
+  --canton-radius: 14px;
+  --canton-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
+
+  --canton-font-main: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --canton-font-hero: "Daml Brand", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --canton-font-grotesk: "Grotesk", "Daml Brand", system-ui, -apple-system, "Segoe UI",
+    sans-serif;
+
+  // Discourse uses CSS variables for typography in a few places; setting these helps ensure consistency.
+  --font-family: var(--canton-font-main);
+  --font-family-sans-serif: var(--canton-font-main);
+}
+
+@font-face {
+  font-family: "Daml Brand";
+  src: url($daml_font_woff2_400) format("woff2"), url($daml_font_woff_1) format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Daml Brand";
+  src: url($daml_font_woff2_500) format("woff2"), url($daml_font_woff_2) format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Daml Brand";
+  src: url($daml_font_woff2_600) format("woff2"), url($daml_font_woff_3) format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Daml Brand";
+  src: url($daml_font_woff2_700) format("woff2"), url($daml_font_woff_4) format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Daml Brand";
+  src: url($daml_font_woff2_800) format("woff2"), url($daml_font_woff_5) format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Daml Brand";
+  src: url($daml_font_woff2_900) format("woff2"), url($daml_font_woff_6) format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Grotesk";
+  src: url($daml_font_woff2_400) format("woff2"), url($daml_font_woff_1) format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Grotesk";
+  src: url($daml_font_woff2_500) format("woff2"), url($daml_font_woff_2) format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Grotesk";
+  src: url($daml_font_woff2_600) format("woff2"), url($daml_font_woff_3) format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Grotesk";
+  src: url($daml_font_woff2_700) format("woff2"), url($daml_font_woff_4) format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+body {
+  font-family: var(--canton-font-main);
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: var(--canton-font-main);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--canton-font-main);
+}
+
+// Landing-only hero + discovery layout
+html[data-canton-landing] {
+  background: var(--canton-paper);
+}
+
+html[data-canton-landing] body {
+  background: var(--canton-paper);
+}
+
+// Hide hero everywhere unless landing flag is present
+.canton-hero {
+  display: none;
+}
+
+html[data-canton-landing] .canton-hero {
+  display: block;
+  padding: 28px 0 10px;
+}
+
+.canton-hero__inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 12px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  column-gap: 24px;
+}
+
+.canton-hero__headline {
+  margin: 0;
+  max-width: 74ch;
+  font-style: italic;
+  font-family: var(--canton-font-hero);
+  color: rgba(20, 20, 29, 0.92);
+}
+
+.canton-hero__title {
+  display: block;
+  font-size: clamp(20px, 2.1vw, 28px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.canton-hero__subtitle {
+  display: block;
+  margin-top: 8px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--canton-muted);
+}
+
+.canton-hero__actions {
+  padding-top: 4px;
+}
+
+html[data-canton-landing] .canton-hero__actions #create-topic {
+  background: var(--canton-ink);
+  border-color: var(--canton-ink);
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 14px;
+  box-shadow: none;
+}
+
+html[data-canton-landing] .canton-hero__actions #create-topic:hover {
+  background: var(--canton-ink-2);
+  border-color: var(--canton-ink-2);
+}
+
+// Two-column "Categories | Latest" layout (homepage categories+latest view)
+html[data-canton-landing] .categories-and-latest {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 18px 12px 40px;
+  display: grid;
+  grid-template-columns: 1.65fr 1fr;
+  gap: 26px;
+}
+
+// Category list icon sizing (only real category icons, not lock)
+.category-list .d-icon-discobot,
+.categories-list .d-icon-discobot,
+.category-list .d-icon-globe,
+.categories-list .d-icon-globe,
+.category-list .d-icon-code,
+.categories-list .d-icon-code {
+  font-size: 1.85em;
+  width: 1.85em;
+  height: 1.85em;
+  vertical-align: -0.15em;
+  margin-right: 0.35em;
+}
+
+// Hide the original "welcome/search" blocks on landing to match the mock.
+html[data-canton-landing] .welcome-wrapper,
+html[data-canton-landing] .search-banner {
+  display: none;
+}
+
+// Section headings
+html[data-canton-landing] .categories-and-latest h2,
+html[data-canton-landing] .categories-and-latest .latest-topic-list-title,
+html[data-canton-landing] .categories-and-latest .categories-title {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 11px;
+  color: rgba(20, 20, 29, 0.55);
+}
+
+// Category list styling to mimic the "table card"
+html[data-canton-landing] .categories-and-latest .category-list,
+html[data-canton-landing] .categories-and-latest .topic-list {
+  background: var(--canton-paper);
+  border: 1px solid var(--canton-line);
+  border-radius: var(--canton-radius);
+  box-shadow: var(--canton-shadow);
+  overflow: hidden;
+}
+
+html[data-canton-landing] .categories-and-latest table {
+  margin: 0;
+}
+
+html[data-canton-landing] .categories-and-latest .category-list tbody tr,
+html[data-canton-landing] .categories-and-latest .topic-list tbody tr {
+  border-bottom: 1px solid var(--canton-line);
+}
+
+html[data-canton-landing] .categories-and-latest .category-list tbody tr:last-child,
+html[data-canton-landing] .categories-and-latest .topic-list tbody tr:last-child {
+  border-bottom: 0;
+}
+
+html[data-canton-landing] .categories-and-latest .category-list td,
+html[data-canton-landing] .categories-and-latest .topic-list td {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+// Make the left color stripe visible & crisp (Discourse uses category color blocks)
+html[data-canton-landing] .categories-and-latest .category-list .category-title-link {
+  font-weight: 600;
+}
+
+// Latest list: soften metadata and tighten spacing
+html[data-canton-landing] .categories-and-latest .latest-topic-list .topic-list-item .link-top-line a.title {
+  font-weight: 600;
+}
+
+html[data-canton-landing] .categories-and-latest .topic-list .posters,
+html[data-canton-landing] .categories-and-latest .topic-list .num,
+html[data-canton-landing] .categories-and-latest .topic-list .age {
+  color: rgba(20, 20, 29, 0.55);
+}
+
+// Category list: align typography for description + latest links
+.category-list .category-description,
+.category-list .category-description p,
+.category-list td.latest,
+.category-list td.latest a,
+.category-list td.latest .relative-date,
+.category-list td.latest time,
+.category-list td.latest span {
+  font-family: var(--canton-font-grotesk);
+  font-size: 13px;
+  line-height: 1.35;
+  font-weight: 400;
+}
+
+.category-list td.latest a {
+  font-weight: 500;
+}
+
+// Category titles: bold + non-italic
+.category-list .category-title-link,
+.category-list .category-title-link:visited,
+.category-list .category-text-title {
+  font-style: normal;
+  font-weight: 700;
+}
+
+// Some category title wrappers inherit italics; force normal.
+.category-title-before,
+.category-name,
+.category-title-contents,
+.category-title-contents * {
+  font-style: normal !important;
+}
+
+// Globe icon should be monochrome (black) in category list.
+.category-list .d-icon-globe,
+.categories-list .d-icon-globe {
+  color: #111 !important;
+}
+
+// "Welcome back" heading: smaller and non-italic, keep the same family
+.welcome-wrapper h1,
+.welcome-wrapper .welcome-banner__title,
+.welcome-wrapper .welcome-banner h1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(28px, 3vw, 40px);
+  letter-spacing: -0.02em;
+}
+
+// Landing page: remove the "Welcome back, <name>" headline above the search bar
+html[data-canton-landing] .welcome-wrapper h1,
+html[data-canton-landing] .welcome-wrapper .welcome-banner__title,
+html[data-canton-landing] .welcome-wrapper .welcome-banner h1 {
+  display: none;
+}
+
+// Discourse variants: welcome banner headline may not live under `.welcome-wrapper`
+html[data-canton-landing] .welcome-banner h1,
+html[data-canton-landing] .welcome-banner__title,
+html[data-canton-landing] .welcome-banner .welcome-message {
+  display: none !important;
+}
+
+/* Header background */
+.d-header {
+  background: #000;
+}
+
+/* Custom header links (separate top menu) */
+.custom-header-links a,
+.custom-header-links a:visited {
+  color: #fff !important;
+  font-size: 13px !important;
+}
+
+.custom-header-links a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Title wrapper topic links */
+.title-wrapper a.topic-link,
+.title-wrapper a.topic-link:visited {
+  color: #fff !important;
+}
+

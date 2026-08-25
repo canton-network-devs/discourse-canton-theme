@@ -1,0 +1,17 @@
+canton_enable_landing_hero:
+  default: true
+  description: "Show the custom hero section on the landing page."
+
+canton_landing_paths:
+  type: list
+  default: "/\n/categories"
+  description: "Paths where the landing hero/layout should apply."
+
+canton_hero_title:
+  default: "The official town square for the Canton Network ecosystem. Connect with developers, node operators, and Daml developers building the future of finance."
+  description: "Landing hero title text."
+
+canton_hero_subtitle:
+  default: ""
+  description: "Landing hero subtitle text."
+
